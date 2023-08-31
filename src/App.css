@@ -1,0 +1,181 @@
+:root {
+  --text: #ffffff;
+  --background: #080820;
+  --primary: #df8181;
+  --secondary: #050514;
+  --accent: #2fb62f;
+}
+/* Customize Scroll bar  */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  height: 4px;
+  background: var(--accent);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+/* Customize Scroll bar  */
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+input {
+  outline: none;
+  border: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  padding: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+form input[type="text"] {
+  background-color: var(--primary);
+  color: var(--text);
+  width: 80%;
+  height: 25px;
+  padding: 4px 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+form input[type="text"]:focus {
+  border: 2px solid var(--accent);
+  width: 90%;
+}
+form input[type="submit"] {
+  display: inline-block;
+  margin: 20px 0 0 auto;
+  padding: 4px 10px;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+form input[type="submit"]:hover {
+  background-color: var(--accent);
+}
+
+.list {
+  margin: 60px 0;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.list .header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+}
+ul li {
+  margin-bottom: 25px;
+}
+li label {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 20px;
+}
+li label input {
+  margin-right: 12px;
+}
+li label .holder {
+  display: flex;
+  flex-direction: column;
+}
+li label .title {
+  font-size: 18px;
+  margin-right: 30px;
+  max-width: 180px;
+  text-align: left;
+}
+li label .time {
+  text-align: left;
+  margin: 4px 0;
+  color: grey;
+}
+li label .del {
+  display: inline-block;
+  margin: 0 0 0 auto;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid red;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+li label .del:hover {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 426px) {
+  ul li label .title {
+    max-width: 120px;
+    word-wrap: break-word;
+  }
+}
